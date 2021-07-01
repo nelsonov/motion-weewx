@@ -1,0 +1,1 @@
+cam03 http://localhost:7999/1/config/set

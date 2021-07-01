@@ -1,0 +1,23 @@
+[Unit]
+Description=Motion Weewx
+After=network.target
+
+[Service]
+Environment=PYTHONUNBUFFERED=1
+Type=simple
+#User=motion #if running as user other than root
+ExecStart=/usr/local/bin/motion-weewx-mqtt.py
+ExecReload=kill -HUP $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+
+
+
+
